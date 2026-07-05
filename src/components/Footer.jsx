@@ -12,10 +12,10 @@ export default function Footer() {
     <footer id="contact" className="border-t border-edge py-16">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <h2 className="font-display text-xl font-bold tracking-wide sm:text-2xl">
-          Let's build something.
+          We can build something together...
         </h2>
         <p className="mt-2 max-w-md text-dim">
-          Reach out if you'd like to talk about these projects — or the next one.
+          Reach out if you'd like to talk about these projects, or the next one.
         </p>
 
         <ul className="mt-8 flex flex-wrap gap-3">
