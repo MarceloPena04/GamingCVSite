@@ -1,0 +1,104 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-void: #07070f;
+  --color-panel: #0d0d1a;
+  --color-edge: #1e1e33;
+  --color-ink: #e6e6f0;
+  --color-dim: #8b8ba3;
+
+  --color-neon-cyan: #22d3ee;
+  --color-neon-magenta: #e879f9;
+  --color-neon-lime: #a3e635;
+
+  --font-display: 'Orbitron', sans-serif;
+  --font-body: 'Rajdhani', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-void);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-neon-cyan);
+  color: var(--color-void);
+}
+
+/* ── neon grid backdrop ─────────────────────────────────────── */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(34, 211, 238, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 211, 238, 0.06) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, black 30%, transparent 100%);
+}
+
+/* ── scanline overlay (very subtle, whole page) ─────────────── */
+.scanlines::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 3px,
+    rgba(0, 0, 0, 0.08) 3px,
+    rgba(0, 0, 0, 0.08) 4px
+  );
+}
+
+/* ── per-project accent (set via style="--accent: ...") ─────── */
+.accent-text { color: var(--accent); }
+.accent-border { border-color: var(--accent); }
+.accent-glow {
+  box-shadow:
+    0 0 24px color-mix(in srgb, var(--accent) 25%, transparent),
+    0 0 2px color-mix(in srgb, var(--accent) 60%, transparent);
+}
+.accent-chip {
+  color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+}
+
+.text-glow {
+  text-shadow:
+    0 0 18px color-mix(in srgb, var(--accent, var(--color-neon-cyan)) 55%, transparent);
+}
+
+/* ── hero title flicker ─────────────────────────────────────── */
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  92% { opacity: 1; }
+  93% { opacity: 0.6; }
+  94% { opacity: 1; }
+  96% { opacity: 0.8; }
+  97% { opacity: 1; }
+}
+.flicker { animation: flicker 6s infinite; }
+
+@keyframes float-in {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.float-in { animation: float-in 0.7s ease-out both; }
+
+@keyframes pulse-down {
+  0%, 100% { transform: translateY(0); opacity: 0.7; }
+  50% { transform: translateY(6px); opacity: 1; }
+}
+.pulse-down { animation: pulse-down 1.8s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .flicker, .float-in, .pulse-down { animation: none; }
+  html { scroll-behavior: auto; }
+}
