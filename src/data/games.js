@@ -14,6 +14,10 @@ export const games = [
     title: 'Sostek Office',
     tagline: 'A 3D online-multiplayer party game (3–4 players) where a committee governs a struggling city, each round players propose policy cards and a rotating Judge decides which one the city has to live with.',
     youtube: '', // add your gameplay video link here
+    gifs: [
+      '', // GIF slot 1 — add a GIF path/URL (e.g. './gifs/sostek-1.gif')
+      '', // GIF slot 2 — add a GIF path/URL (e.g. './gifs/sostek-2.gif')
+    ],
     year: '2026',
     role: 'Lead Developer & Gameplay Programmer',
     duration: '5 months', // dev time — "" to hide
@@ -47,6 +51,10 @@ export const games = [
     title: 'EOTM (Employee Of The Month)',
     tagline: 'This game is a 2D topdown-angled singleplayer game where the player has to use their intuition and logic to solve challenges and make as many points as possible.',
     youtube: 'https://youtu.be/Vd_jfKXSKLs',
+    gifs: [
+      'src/gifs/EOTMVideo-ezgif.com-video-to-gif-converter-2.gif', // GIF slot 1 — add a GIF path/URL (e.g. './gifs/eotm-1.gif')
+      'src/gifs/EOTMVideo-ezgif.com-video-to-gif-converter.gif', // GIF slot 2 — add a GIF path/URL (e.g. './gifs/eotm-2.gif')
+    ],
     year: '2025',
     role: 'Solo developer',
     duration: '3 months', // dev time — "" to hide
@@ -75,12 +83,18 @@ export const games = [
   },
   {
     id: 'game-three',
-    title: 'Vehicle-Actuated Adaptive Traffic Control System',
+    title: 'Vehicle-Actuated Adaptive Traffic Control System Simulation',
     tagline: 'A Unity simulation where traffic lights never make you wait at an empty intersection. It is a rules-based heuristic controller that realistically reads real-time lane demand and dynamically adjusts green-light durations to keep traffic flowing and prevent gridlock.',
-    youtube: '', // add your demo/gameplay video link here
+    youtube: '', // (unused for this game — see `videos` below)
     year: '2025',
     role: 'Solo developer',
     duration: '3 months', // dev time — fill in or leave "" to hide
+    // This game has three video slots. Paste a YouTube link in each.
+    videos: [
+      'https://youtu.be/nz2t5TKZMcY', // add video 1 link here
+      'https://youtu.be/qweSfdzuFDM', // add video 2 link here
+      'https://youtu.be/KhyXp1QSYSM', // add video 3 link here
+    ],
     accent: 'lime', // cyan | magenta | lime | amber | red
     description:
       'This is an intelligent, reactive traffic-management simulation built in Unity. The intersection runs on a rules-based heuristic that reads real-time sensor data and scales green-light durations to match actual lane demand, so traffic keeps flowing and never piles up at an empty crossing. ' +

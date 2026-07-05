@@ -25,7 +25,7 @@ export default function Footer() {
                 href={l.href}
                 target={l.href.startsWith('mailto:') ? undefined : '_blank'}
                 rel="noreferrer"
-                className="inline-block rounded-lg border border-edge bg-panel px-5 py-2.5 font-display text-xs font-bold tracking-[0.2em] uppercase text-neon-cyan transition-colors hover:border-neon-cyan"
+                className="inline-block rounded-lg border border-edge bg-panel px-5 py-2.5 font-display text-xs font-bold tracking-[0.2em] uppercase text-neon-amber transition-colors hover:border-neon-amber"
               >
                 {l.label}
               </a>

@@ -1,4 +1,5 @@
 import VideoPlayer from './VideoPlayer.jsx'
+import GifSlot from './GifSlot.jsx'
 
 const ACCENTS = {
   cyan: 'var(--color-neon-cyan)',
@@ -36,9 +37,20 @@ export default function GameSection({ game, index }) {
             flip ? 'lg:[&>*:first-child]:order-2' : ''
           }`}
         >
-          {/* video */}
+          {/* video(s) — a game may have a single `youtube` link or a `videos` array */}
           <div>
-            <VideoPlayer youtube={game.youtube} title={game.title} />
+            <div className="space-y-4">
+              {(game.videos ?? [game.youtube]).map((video, i, arr) => (
+                <VideoPlayer
+                  key={i}
+                  youtube={video}
+                  title={arr.length > 1 ? `${game.title} — video ${i + 1}` : game.title}
+                />
+              ))}
+              {(game.gifs ?? []).map((gif, i) => (
+                <GifSlot key={i} gif={gif} title={game.title} />
+              ))}
+            </div>
             <div className="mt-4 flex flex-wrap gap-x-6 gap-y-1 text-sm text-dim">
               <span>
                 <span className="accent-text font-semibold">Role</span> {game.role}
