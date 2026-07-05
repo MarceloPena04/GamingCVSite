@@ -52,8 +52,8 @@ export const games = [
     tagline: 'This game is a 2D topdown-angled singleplayer game where the player has to use their intuition and logic to solve challenges and make as many points as possible.',
     youtube: 'https://youtu.be/Vd_jfKXSKLs',
     gifs: [
-      'src/gifs/EOTMVideo-ezgif.com-video-to-gif-converter-2.gif', // GIF slot 1 — add a GIF path/URL (e.g. './gifs/eotm-1.gif')
-      'src/gifs/EOTMVideo-ezgif.com-video-to-gif-converter.gif', // GIF slot 2 — add a GIF path/URL (e.g. './gifs/eotm-2.gif')
+      './gifs/EOTMVideo-ezgif.com-video-to-gif-converter-2.gif', // GIF slot 1 — files live in public/gifs/
+      './gifs/EOTMVideo-ezgif.com-video-to-gif-converter.gif', // GIF slot 2 — files live in public/gifs/
     ],
     year: '2025',
     role: 'Solo developer',
