@@ -5,6 +5,8 @@ const ACCENT_TEXT = {
   cyan: 'text-neon-cyan',
   magenta: 'text-neon-magenta',
   lime: 'text-neon-lime',
+  amber: 'text-neon-amber',
+  red: 'text-neon-red',
 }
 
 export default function Hero() {

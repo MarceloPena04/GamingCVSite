@@ -4,6 +4,8 @@ const ACCENTS = {
   cyan: 'var(--color-neon-cyan)',
   magenta: 'var(--color-neon-magenta)',
   lime: 'var(--color-neon-lime)',
+  amber: 'var(--color-neon-amber)',
+  red: 'var(--color-neon-red)',
 }
 
 export default function GameSection({ game, index }) {
