@@ -1,12 +1,6 @@
 import { useState } from 'react'
 import { getYouTubeId } from '../data/games.js'
 
-/**
- * Click-to-play YouTube embed. Shows the video thumbnail with a neon play
- * button until clicked — no YouTube iframe/cookies load until then, which
- * keeps the page fast. Falls back to a "coming soon" panel while the data
- * file still has the placeholder link.
- */
 export default function VideoPlayer({ youtube, title }) {
   const [playing, setPlaying] = useState(false)
   const videoId = getYouTubeId(youtube)

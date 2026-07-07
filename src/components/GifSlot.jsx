@@ -1,8 +1,3 @@
-/**
- * A GIF display slot — same size and framing as the video player. Drop a GIF
- * URL (or a path to a file in /public, e.g. './gifs/my-clip.gif') into the
- * game's `gif` field. While it's empty, a styled placeholder is shown.
- */
 export default function GifSlot({ gif, title }) {
   const hasGif = gif && !gif.includes('PATH_')
 

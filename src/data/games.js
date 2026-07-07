@@ -1,13 +1,3 @@
-// ─────────────────────────────────────────────────────────────
-//  YOUR GAMES — this is the only file you need to edit to add
-//  your real content.
-//
-//  youtube: paste the FULL YouTube link (any format works:
-//  watch?v=..., youtu.be/..., or just the 11-char video id).
-//  ⚠ The video must be UNLISTED, not private — private videos
-//  cannot be embedded or watched by link.
-// ─────────────────────────────────────────────────────────────
-
 export const games = [
   {
     id: 'game-one',

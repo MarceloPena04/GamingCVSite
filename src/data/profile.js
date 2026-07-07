@@ -1,7 +1,3 @@
-// ─────────────────────────────────────────────────────────────
-//  YOUR IDENTITY — everything shown in the hero and footer.
-//  Edit freely; leave a field as "" to hide it.
-// ─────────────────────────────────────────────────────────────
 export const profile = {
   name: 'Marcelo Peña',
   role: 'Game Developer',
