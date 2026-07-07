@@ -13,10 +13,10 @@ export const games = [
     id: 'game-one',
     title: 'Sostek Office',
     tagline: 'A 3D online-multiplayer party game (3–4 players) where a committee governs a struggling city, each round players propose policy cards and a rotating Judge decides which one the city has to live with.',
-    youtube: '', // add your gameplay video link here
+    youtube: 'https://youtu.be/X9qPkQ0sfYU', // add your gameplay video link here
     gifs: [
-      '', // GIF slot 1 — add a GIF path/URL (e.g. './gifs/sostek-1.gif')
-      '', // GIF slot 2 — add a GIF path/URL (e.g. './gifs/sostek-2.gif')
+      './gifs/ForGif-ezgif.com-video-to-gif-converter-2.gif', // GIF slot 1 — add a GIF path/URL (e.g. './gifs/sostek-1.gif')
+      './gifs/ForGif-ezgif.com-video-to-gif-converter.gif', // GIF slot 2 — add a GIF path/URL (e.g. './gifs/sostek-2.gif')
     ],
     year: '2026',
     role: 'Lead Developer & Gameplay Programmer',
@@ -25,7 +25,7 @@ export const games = [
     description:
       'Sostek Office is a real-time multiplayer card game set in a toon-shaded courtroom. The players form a city committee: each round the Committee Members secretly pick a policy proposal from their hand, argue their case over live voice, and a rotating Judge picks the winning card. ' +
       "The twist is that every card hides its real environmental, social and economic effects until after the Judge has already committed, so you have to persuade and read the room. " +
-      "The city runs on three stats that decay a little every round, drive any of them to zero and the city collapses and everyone loses, push one to the top or survive the total rounds and the city triumphs. ",
+      "The city, which can be seen through the window, and constantly changes, runs on three stats that decay a little every round, drive any of them to zero and the city collapses and everyone loses, push one to the top or survive the total rounds and the city triumphs. ",
     tech: ['Unity', 'C#', 'Netcode for GameObjects', 'Unity Gaming Services (Relay / Lobby / Auth)', 'Vivox Voice Chat', 'Cinemachine', 'URP + Toon Shader', 'Blender'],
     sections: [
       {
@@ -84,7 +84,7 @@ export const games = [
   {
     id: 'game-three',
     title: 'Vehicle-Actuated Adaptive Traffic Control System Simulation',
-    tagline: 'A Unity simulation where traffic lights never make you wait at an empty intersection. It is a rules-based heuristic controller that realistically reads real-time lane demand and dynamically adjusts green-light durations to keep traffic flowing and prevent gridlock.',
+    tagline: 'A 2D isometric semi-realistic Unity simulation designed to optimize traffic flow on real-world intersections.',
     youtube: '', // (unused for this game — see `videos` below)
     year: '2025',
     role: 'Solo developer',
