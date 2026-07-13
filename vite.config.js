@@ -2,8 +2,9 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
-// base: './' makes the build work on GitHub Pages (any repo name) and Vercel alike
+const repoName = process.env.GITHUB_REPOSITORY?.split('/')[1] ?? 'GamingCVSite'
+
 export default defineConfig({
-  base: './',
+  base: process.env.GITHUB_ACTIONS ? `/${repoName}/` : './',
   plugins: [react(), tailwindcss()],
 })
